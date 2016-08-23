@@ -1,6 +1,7 @@
 package in.ka.java8.lambda;
 
-import java.util.ArrayList;
+import in.ka.util.Person;
+
 import java.util.Collections;
 import java.util.List;
 import java.util.function.Predicate;
@@ -72,54 +73,4 @@ class LambdaUseCases {
 			}
 		}
 	}
-}
-
-class Person {
-	private String name;
-	private String designation;
-	private String empId;
-
-	public Person(String name, String designation, String empId) {
-		super();
-		this.name = name;
-		this.designation = designation;
-		this.empId = empId;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getDesignation() {
-		return designation;
-	}
-
-	public void setDesignation(String designation) {
-		this.designation = designation;
-	}
-
-	public String getEmpId() {
-		return empId;
-	}
-
-	public void setEmpId(String empId) {
-		this.empId = empId;
-	}
-
-	public static List<Person> getPersonList() {
-		List<Person> personList = new ArrayList<Person>();
-		personList.add(new Person("Kailash", "Lead Engineer", "01"));
-		personList.add(new Person("Harish", "CA", "03"));
-		personList.add(new Person("Kaushal", "Business", "03"));
-		personList.add(new Person("Sandeep", "SE", "04"));
-		personList.add(new Person("prateek", "CA", "05"));
-		personList.add(new Person("Suraj", "SE", "06"));
-		return personList;
-
-	}
-
 }
