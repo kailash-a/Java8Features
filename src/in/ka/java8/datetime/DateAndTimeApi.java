@@ -18,7 +18,7 @@ import java.util.Locale;
 public class DateAndTimeApi {
 	public static void main(String[] args) {
 		// get today date.
-		LocalDate today = LocalDate.now().plusDays(1);
+		LocalDate today = LocalDate.now();
 		System.out.println("today date is :" + today);
 		Exercise ex = new Exercise();
 		ex.returnLengthofMonthsV2(2016);
