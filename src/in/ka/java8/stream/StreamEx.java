@@ -7,7 +7,8 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * @author kailash Java 8 is bringing on new Streams API java.util.stream
+ * @author kailash 
+ * 		   Java 8 is bringing on new Streams API java.util.stream
  *         package, which allow you to process elements of Java Collections in
  *         parallel. Java is inheritably sequential and there is no direct mean
  *         to introduce parallel processing at library level, stream API is
@@ -25,19 +26,21 @@ public class StreamEx {
 	public static void main(String[] args) {
 
 		// filter stream example to get only those employees having designation as "SE"
-		List<Person> person = personSeqStream.filter(personSeqStream -> "SE".equals(personSeqStream.getDesignation()))
+		List<Person> person = personSeqStream
+				.filter(personSeqStream -> "SE".equals(personSeqStream.getDesignation()))
 				.collect(Collectors.toList());
 		System.out.println("person : " + person);
 
 		// combine multiple conditions
 		// cannot use the same stream twice as it is already consumed above
-		List<Person> personCondition = Person.getPersonList().stream().filter(
-				personSeqStream -> "SE".equals(personSeqStream.getDesignation()) && personSeqStream.getEmpId() > 5)
+		List<Person> personCondition = Person.getPersonList().stream()
+				.filter(personSeqStream -> "SE".equals(personSeqStream.getDesignation()) && personSeqStream.getEmpId() > 5)
 				.collect(Collectors.toList());
 		System.out.println("person : " + personCondition);
 
 		// distinct designations using map
-		List<String> personDistinct = Person.getPersonList().stream().map((s) -> s.getDesignation()).distinct()
+		List<String> personDistinct = Person.getPersonList().stream()
+				.map((s) -> s.getDesignation()).distinct()
 				.collect(Collectors.toList());
 		System.out.println("person : " + personDistinct);
 
